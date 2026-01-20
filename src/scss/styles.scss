@@ -1,0 +1,95 @@
+@import "bootstrap/scss/bootstrap";
+
+#main-container {
+   border-radius: 1em;
+   border-style: solid;
+   border-color:#50545D;
+   background: linear-gradient(135deg, #3C4049, #1D2027);
+  box-shadow: 0 4px 26px rgba(0, 0, 0, 0.15);
+
+}
+body {
+  background: linear-gradient(135deg, #3C4049, #1D2027);
+  color: #CDCECB;
+}
+.text-white {
+  color:#CDCECB !important;
+}
+.search-input {
+
+}
+.search-input .form-control, .search-input span,.search-input .form-control::placeholder {
+  background-color: #292E34;
+  color:#E4E4E4;
+  border-color:#50545D;
+
+}
+.search-input span {
+  border-right:none;
+}
+
+.search-input .form-control {
+  border-left:none;
+}
+
+.navbar {
+  background-color: transparent !important;
+}
+
+.img-placeholder img{
+  max-width: 80%;
+}
+
+.carousel {
+
+}
+
+.nav-icon-pill{
+  font-size: 1.2rem;
+}
+.nav-icon-pill {
+  width: 160px;
+  height: 120px;
+  border-radius: 20px;
+  border-color: #45678A;
+  border-style: solid;
+  border-width: 2px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  background: #2f333a;     /* dark background */
+  color: #e8e8e8;
+
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+/* Active style (orange outline like your screenshot) */
+.nav-icon-pill.active {
+  border-color: #c28b3c;
+}
+
+/* Hover effect */
+.nav-icon-pill:hover {
+  border-color: #c28b3c;
+  color: #ffffff;
+}
+
+.featured-card {
+  border: 0;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background: #f6f7f9;
+}
+
+.featured-card .thumb {
+
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+}
