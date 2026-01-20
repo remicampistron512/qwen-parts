@@ -1,0 +1,315 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PC Shop - Bootstrap Layout</title>
+    <script type="module" src="./js/main.js"></script>
+    <style>
+        :root {
+            --page-bg: #d9d9d9;
+            --muted-text: #444;
+            --card-img-bg: #e7eaee;
+        }
+
+        body {
+            background: var(--page-bg);
+            color: #111;
+        }
+
+        /* Keep the design airy like your mockup */
+        .top-space {
+            padding-top: 2rem;
+            padding-bottom: 1.25rem;
+        }
+
+        .nav-links a {
+            color: var(--muted-text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+
+
+
+        .category-card {
+            border: 0;
+            border-radius: 0.25rem;
+            overflow: hidden;
+            background: #f6f7f9;
+        }
+
+
+
+        .section-title {
+            font-weight: 500;
+            color: #111;
+            margin-bottom: 1rem;
+        }
+
+
+
+        .footer-links a {
+            color: #2f2f2f;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Small visual tweak so the search feels like the mock */
+        .search-input {
+            max-width: 320px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Header -->
+<div id="main-container" class="container">
+
+
+<header class="container top-space">
+    <!-- Top row: Logo / Search / Icons -->
+    <div class="row align-items-center gy-3">
+        <div class="col-12 col-md-4 text-center text-md-start">
+            <h2><span class="fw-bold">Qwen</span><span class="fw-lighter">Parts</span></h2>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="input-group search-input">
+                <span class="input-group-text">
+                  <i class="bi bi-search"></i>
+                </span>
+                    <input
+                            type="text"
+                            class="form-control"
+                            placeholder="search"
+                            aria-label="search"
+                    />
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="d-flex justify-content-center justify-content-md-end align-items-center gap-4">
+                <a class="text-white" href="#" aria-label="Account">
+                    <i class="bi bi-person-circle fs-4"></i>
+                </a>
+
+
+                <a  class="text-white"  href="#" aria-label="Cart">
+                    <i class="bi bi-bag fs-4"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Nav links row -->
+    <nav data-bs-theme="dark" class=" navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Motherboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Case</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Power Supply</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Storage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >
+                            Graphics card
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero -->
+<main class="container">
+    <section class="py-5">
+        <div class="row align-items-center gy-4">
+            <div class="col-12 col-lg-6">
+                <h1 class="hero-title mb-0">Build a better pc</h1>
+                <h5 class="fw-lighter">Premium components, verified compatibility,fast delivery</h5>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="img-placeholder">
+                    <img src="img/hero.png" alt="Hero image" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by category -->
+
+
+    <h4 class="mb-5">Shop by category</h4>
+
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <ul class="nav justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-pill active">
+                        <i class="bi bi-gpu-card"></i>
+                        <span class="nav-link" href="#">GPU</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-pill">
+                            <i class="bi bi bi-cpu"></i>
+                            <span class="nav-link" href="#">CPU</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-pill ">
+                            <i class="bi bi-memory"></i>
+                            <span class="nav-link" href="#">RAM</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-pill ">
+                            <i class="bi bi-motherboard"></i>
+                            <span class="nav-link" href="#">Motherboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-pill ">
+                            <i class="bi  bi-database"></i>
+                            <span class="nav-link" href="#">Storage</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev justify-content-lg-start" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next justify-content-lg-end" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+
+    <!-- Featured -->
+    <section class="py-5">
+        <h4>featured</h4>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="featured-card">
+                    <div class="thumb">
+                        <img class="img-fluid" src="img/case.jpg" alt="Card image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="featured-card">
+                    <div class="thumb">
+                        <img class="img-fluid" src="img/cooler.jpg" alt="Card image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="featured-card">
+                    <div class="thumb">
+                        <img class="img-fluid" src="img/ryzen-7.jpg" alt="Card image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="featured-card">
+                    <div class="thumb">
+                        <img class="img-fluid" src="img/power-supply.jpg" alt="Card image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer links -->
+    <footer class="py-5">
+        <div class="row g-4 footer-links small">
+            <div class="col-6 col-md-3">
+                <ul class="list-unstyled mb-0 d-grid gap-2">
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <ul class="list-unstyled mb-0 d-grid gap-2">
+                    <li><a href="#">Motherboard</a></li>
+                    <li><a href="#">Case</a></li>
+                    <li><a href="#">Power Supplies</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <ul class="list-unstyled mb-0 d-grid gap-2">
+                    <li><a href="#">Storage</a></li>
+                    <li><a href="#">Graphics card</a></li>
+                    <li><a href="#">Memory</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <ul class="list-unstyled mb-0 d-grid gap-2">
+                    <li><a href="#">CPU</a></li>
+                    <li><a href="#">CPU Cooler</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</main>
+</div>
+
+</body>
+</html>
