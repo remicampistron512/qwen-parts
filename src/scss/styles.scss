@@ -80,16 +80,19 @@ body {
   color: #ffffff;
 }
 
-.featured-card {
-  border: 0;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  background: #f6f7f9;
+#featured {
+
+}
+#featured .card {
+  background: linear-gradient(135deg, #3C4049, #1D2027);
+  color: #CDCECB;
 }
 
-.featured-card .thumb {
 
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
+.footer-links a {
+  color: #E4E4E4;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
 }
