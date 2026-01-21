@@ -114,18 +114,28 @@ body {
 // =====================================================
 // 6) Search Input (Navbar search)
 // =====================================================
-.search-input {
-  /* keeping for future layout rules */
-}
+
 
 /* Input + icon styling */
-.search-input .form-control,
-.search-input span,
-.search-input .form-control::placeholder {
-  background-color: #292e34;
+
+.search-input {
+  background-color: var(--surface-2);
   color: var(--text-light);
   border-color: var(--border);
+  border:1px solid var(--border);
+  border-radius: 20px;
 }
+ .search-input .form-control, .search-input .form-control::placeholder {
+  background-color: transparent;
+  color: var(--text-light);
+  border:none;
+}
+.search-input i {
+  color: var(--text-light);
+}
+ .search-input .form-control:focus {
+  box-shadow: none;
+ }
 
 .search-input span {
   border-right: none;

@@ -10,7 +10,7 @@ export function SearchView() {
         return `
       <section class="py-5">
         <h4>Search</h4>
-        <p class="text-muted">Type something to search products.</p>
+        <p class="text-white">Type something to search products.</p>
       </section>
     `;
     }

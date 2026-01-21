@@ -9,43 +9,7 @@
     <link href="./scss/styles.scss" rel="stylesheet" />
     <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" integrity="" crossorigin="anonymous">
     <script type="module" src="./main.js"></script>
-    <style>
-        :root {
-            --page-bg: #d9d9d9;
-            --muted-text: #444;
-            --card-img-bg: #e7eaee;
-        }
 
-        body {
-            background: var(--page-bg);
-            color: #111;
-        }
-
-        /* Keep the design airy like your mockup */
-        .top-space {
-            padding-top: 2rem;
-            padding-bottom: 1.25rem;
-        }
-
-        .nav-links a {
-            color: var(--muted-text);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-
-
-
-
-
-        /* Small visual tweak so the search feels like the mock */
-        .search-input {
-            max-width: 320px;
-        }
-    </style>
 </head>
 
 <body>
@@ -57,11 +21,14 @@
     <!-- Top row: Logo / Search / Icons -->
     <div class="row align-items-center gy-3">
         <div class="col-12 col-md-4 text-center text-md-start">
-            <h2><span class="fw-bold">Qwen</span><span class="fw-lighter">Parts</span></h2>
+            <h2><a href="/"><span class="fw-bold">Qwen</span><span class="fw-lighter">Parts</span></a></h2>
         </div>
 
         <div class="col-12 col-md-4 d-flex justify-content-center">
-            <form id="search-form" class="d-flex" role="search">
+            <form id="search-form" class="search-input d-flex" role="search">
+                <button class="btn " type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
                 <input
                         id="search-input"
                         class="form-control me-2"
@@ -69,9 +36,7 @@
                         placeholder="Search products..."
                         aria-label="Search"
                 />
-                <button class="btn btn-outline-primary" type="submit">
-                    <i class="bi bi-search"></i>
-                </button>
+
             </form>
 
         </div>

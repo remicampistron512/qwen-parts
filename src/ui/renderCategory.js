@@ -15,9 +15,9 @@ export function renderCategory(categoryName, products) {
               <a href="/products/${p.id}" data-link>
                 <h5 class="card-title">${p.title}</h5>
               </a>
-               <a href="/products/${p.id}" data-link>
-                <p class="card-text">${p.shortDescription}</p>
-               </a>
+              
+                <p class="text-white card-text">${p.shortDescription}</p>
+          
                 <div class="mt-auto">
                   <p class="fw-bold mb-2">${p.price.toFixed(2)} €</p>
                   <button class="btn btn-primary w-100 add-to-cart" data-id="${p.id}">
