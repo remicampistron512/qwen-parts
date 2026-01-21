@@ -10,35 +10,58 @@ import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 const app = document.querySelector("#main-content");
 const mainContainer = document.querySelector("#main-container");
 const routes = [
-    { path: "/",       view: Home },
-    { path: "/motherboard",  view: Motherboard },
-    { path: "/users",  view: Users },
+    { path: "/", view: Home },
+    { path: "/category/:name", view: CategoryView },
+    { path: "/users", view: Users },
 ];
 
 // -------- Router core --------
 function matchRoute(pathname) {
-    return routes.find(r => r.path === pathname) || { view: NotFound };
+    for (const route of routes) {
+        const routeParts = route.path.split("/").filter(Boolean);
+        const pathParts = pathname.split("/").filter(Boolean);
+
+        if (routeParts.length !== pathParts.length) continue;
+
+        const params = {};
+        let match = true;
+
+        for (let i = 0; i < routeParts.length; i++) {
+            const rp = routeParts[i];
+            const pp = pathParts[i];
+
+            if (rp.startsWith(":")) {
+                params[rp.slice(1)] = decodeURIComponent(pp);
+            } else if (rp !== pp) {
+                match = false;
+                break;
+            }
+        }
+
+        if (match) return { view: route.view, params };
+    }
+
+    return { view: NotFound, params: {} };
 }
-
 async function render() {
-    const { view } = matchRoute(location.pathname);
+    const { view, params } = matchRoute(location.pathname);
 
-    // Optional: highlight active link
     document.querySelectorAll("a[data-link]").forEach(a => {
         a.classList.toggle("active", a.getAttribute("href") === location.pathname);
     });
 
-    // Render view
-    app.innerHTML = await matchRoute(location.pathname).view();
+    app.innerHTML = await view(params);
 
-    // reveal after the DOM is updated
     requestAnimationFrame(() => {
         mainContainer.classList.remove("app-hidden");
     });
 }
 
 
-
+function CategoryView({ name }) {
+    const filtered = PRODUCTS.filter(p => p.category === name);
+    return renderCategory(name, filtered);
+}
 
 render();
 function navigate(to) {
@@ -207,19 +230,8 @@ function Home() {
   `;
 }
 
-function Motherboard() {
-    return `
-    <h1>Home</h1>
-    <p>This is a vanilla JS SPA.</p>
-  `;
-}
 
-function About() {
-    return `
-    <h1>About</h1>
-    <p>No React, no framework. Just History API + render().</p>
-  `;
-}
+
 
 
 async function Users() {
@@ -242,3 +254,75 @@ function NotFound() {
     <a href="/" data-link>Go Home</a>
   `;
 }
+function showCategory(category) {
+    const filtered = PRODUCTS.filter(p => p.category === category);
+
+    document.querySelector("#app").innerHTML =
+        renderCategory(category, filtered);
+}
+
+function renderCategory(categoryName, products) {
+    const cardsHTML = products.map(p => `
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100">
+        <img src="${p.img}" class="card-img-top" alt="${p.title}">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">${p.title}</h5>
+          <p class="card-text">${p.description}</p>
+
+          <div class="mt-auto">
+            <p class="fw-bold mb-2">${p.price.toFixed(2)} €</p>
+            <button class="btn btn-primary w-100 add-to-cart" data-id="${p.id}">
+              <i class="bi bi-cart"></i> Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+    return `
+    <section class="py-5">
+      <h4 class="mb-4 text-capitalize">${categoryName}</h4>
+      <div class="row g-4">
+        ${cardsHTML || `<p class="text-muted">No products found.</p>`}
+      </div>
+    </section>
+  `;
+}
+
+
+const PRODUCTS = [
+    {
+        id: 1,
+        category: "motherboard",
+        title: "ASUS B550",
+        description: "AM4 ATX motherboard with PCIe 4.0",
+        price: 149.99,
+        img: "img/motherboard.jpg"
+    },
+    {
+        id: 2,
+        category: "motherboard",
+        title: "MSI B760",
+        description: "Intel LGA1700 motherboard for 12th/13th gen",
+        price: 169.99,
+        img: "img/motherboard2.jpg"
+    },
+    {
+        id: 3,
+        category: "cpu",
+        title: "Ryzen 7 5800X",
+        description: "8 cores / 16 threads",
+        price: 229.99,
+        img: "img/ryzen-7.jpg"
+    },
+    {
+        id: 4,
+        category: "psu",
+        title: "Corsair RM750",
+        description: "750W Gold modular PSU",
+        price: 119.99,
+        img: "img/power-supply.jpg"
+    }
+];
