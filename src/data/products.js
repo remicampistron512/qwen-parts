@@ -56,7 +56,7 @@ export const PRODUCTS = [
         longDescription:
             "The Gigabyte X570 AORUS Elite is a performance-focused AM4 motherboard designed for higher-end Ryzen builds. It features PCIe 4.0 lanes, robust VRM cooling, and excellent expansion potential, making it ideal for gamers and creators who want fast NVMe storage and strong platform stability.",
         price: 189.99,
-        img: "/img/motherboard-x570.jpg",
+        img: "/img/motherboard-x570.png",
         details: {
             formFactor: "ATX",
             socket: "AM4",
@@ -79,7 +79,7 @@ export const PRODUCTS = [
         longDescription:
             "The ASRock B650M Pro RS is a compact AM5 motherboard that brings DDR5 and PCIe 4.0 support to modern Ryzen 7000 builds. It’s engineered for high efficiency and feature balance, providing a strong base for gaming and productivity in micro-ATX builds without unnecessary extras.",
         price: 159.99,
-        img: "/img/motherboard-b650m.jpg",
+        img: "/img/motherboard-b650m.png",
         details: {
             formFactor: "Micro-ATX",
             socket: "AM5",
@@ -106,7 +106,7 @@ export const PRODUCTS = [
         longDescription:
             "The Ryzen 7 5800X is a high-performance AM4 processor with 8 cores and 16 threads, offering excellent gaming results and strong productivity performance. It’s a great upgrade for existing AM4 systems and remains a solid option for balanced gaming and content creation workloads.",
         price: 229.99,
-        img: "/img/ryzen-7.jpg",
+        img: "/img/ryzen-7.png",
         details: {
             brand: "AMD",
             socket: "AM4",
@@ -128,7 +128,7 @@ export const PRODUCTS = [
         longDescription:
             "The Ryzen 5 5600 is one of the best value AM4 gaming CPUs, combining 6 cores and 12 threads with strong single-core performance. It’s an excellent choice for mid-range gaming builds and pairs well with GPUs up to the upper-mid range at 1080p and 1440p.",
         price: 139.99,
-        img: "/img/ryzen-5.jpg",
+        img: "/img/ryzen-5.png",
         details: {
             brand: "AMD",
             socket: "AM4",
@@ -150,7 +150,7 @@ export const PRODUCTS = [
         longDescription:
             "The Ryzen 7 7800X3D is a top-tier gaming processor for AM5 platforms, featuring 3D V-Cache for exceptional gaming performance in CPU-heavy titles. It’s designed for enthusiasts who want maximum FPS and smooth frame times, especially when paired with high-end GPUs.",
         price: 399.99,
-        img: "/img/ryzen-7800x3d.jpg",
+        img: "/img/ryzen-7800x3d.png",
         details: {
             brand: "AMD",
             socket: "AM5",
@@ -172,7 +172,7 @@ export const PRODUCTS = [
         longDescription:
             "The Intel Core i5-13600K delivers excellent gaming performance and strong multi-threaded capabilities thanks to its hybrid core design. With powerful single-core speed and efficient cores for background tasks, it’s a strong option for high-refresh gaming and creative workflows.",
         price: 309.99,
-        img: "/img/i5-13600k.jpg",
+        img: "/img/i5-13600k.png",
         details: {
             brand: "Intel",
             socket: "LGA1700",
@@ -199,7 +199,7 @@ export const PRODUCTS = [
         longDescription:
             "The RTX 4060 is a modern GPU designed for efficient 1080p gaming and entry-level 1440p performance. With support for DLSS, ray tracing, and excellent power efficiency, it’s a strong choice for compact builds and gamers who want smooth performance without high power draw.",
         price: 329.99,
-        img: "/img/rtx-4060.jpg",
+        img: "/img/rtx-4060.png",
         details: {
             brand: "NVIDIA",
             vram: "8GB GDDR6",
@@ -219,7 +219,7 @@ export const PRODUCTS = [
         longDescription:
             "The RTX 4070 SUPER is a premium 1440p gaming GPU with excellent ray tracing performance and strong efficiency. It’s ideal for high refresh-rate gaming and content creation workflows that benefit from CUDA acceleration, delivering a great balance between power and performance.",
         price: 649.99,
-        img: "/img/rtx-4070-super.jpg",
+        img: "/img/rtx-4070-super.png",
         details: {
             brand: "NVIDIA",
             vram: "12GB GDDR6X",
@@ -239,7 +239,7 @@ export const PRODUCTS = [
         longDescription:
             "The RX 7800 XT is an excellent 1440p GPU focused on high raster performance and generous VRAM capacity. With 16GB of memory, it’s well-suited for modern high-texture games and delivers strong value for gamers prioritizing raw performance over heavy ray tracing workloads.",
         price: 519.99,
-        img: "/img/rx-7800xt.jpg",
+        img: "/img/rx-7800xt.png",
         details: {
             brand: "AMD",
             vram: "16GB GDDR6",
@@ -259,7 +259,7 @@ export const PRODUCTS = [
         longDescription:
             "The RX 7600 is a value-focused GPU that targets smooth 1080p gaming. It provides good performance-per-euro and is a solid upgrade for older systems, offering modern encoder support and efficient operation in mainstream gaming builds.",
         price: 269.99,
-        img: "/img/rx-7600.jpg",
+        img: "/img/rx-7600.png",
         details: {
             brand: "AMD",
             vram: "8GB GDDR6",
@@ -283,7 +283,7 @@ export const PRODUCTS = [
         longDescription:
             "Corsair Vengeance DDR4 memory is a trusted choice for stable gaming performance and everyday productivity. With a balanced speed profile and wide compatibility, it’s a great match for mainstream builds aiming for smooth multitasking and responsive gameplay.",
         price: 49.99,
-        img: "/img/ram-ddr4-16gb.webp",
+        img: "/img/ram-ddr4-16gb.png",
         details: {
             capacity: "16GB (2x8GB)",
             type: "DDR4",
@@ -302,7 +302,7 @@ export const PRODUCTS = [
         longDescription:
             "G.SKILL Ripjaws DDR4 offers higher capacity and speed, making it ideal for users who multitask heavily or run memory-hungry applications. 32GB is a sweet spot for creative work, streaming, and modern games that benefit from extra headroom.",
         price: 79.99,
-        img: "/img/ram-ddr4-32gb.jpg",
+        img: "/img/ram-ddr4-32gb.png",
         details: {
             capacity: "32GB (2x16GB)",
             type: "DDR4",
@@ -321,7 +321,7 @@ export const PRODUCTS = [
         longDescription:
             "Kingston Fury Beast DDR5 provides high bandwidth and modern performance for the latest platforms. DDR5 6000MHz is a strong target for many builds, offering a great balance of speed and stability for gaming and productivity workloads.",
         price: 129.99,
-        img: "/img/ram-ddr5-32gb.jpg",
+        img: "/img/ram-ddr5-32gb.png",
         details: {
             capacity: "32GB (2x16GB)",
             type: "DDR5",
@@ -344,7 +344,7 @@ export const PRODUCTS = [
         longDescription:
             "The Samsung 980 NVMe SSD provides fast system responsiveness and improved loading times compared to SATA drives. It’s a great option for OS + games storage, delivering a strong combination of performance, reliability, and value for mainstream builds.",
         price: 79.99,
-        img: "/img/ssd-samsung-980.jpg",
+        img: "/img/ssd-samsung-980.png",
         details: {
             capacity: "1TB",
             interface: "NVMe PCIe 3.0",
@@ -363,7 +363,7 @@ export const PRODUCTS = [
         longDescription:
             "The WD Black SN850X is a high-performance PCIe 4.0 NVMe SSD built for demanding workloads and fast game loading. With excellent throughput and high capacity, it’s ideal for enthusiasts who want top-tier storage performance for large game libraries and creative projects.",
         price: 169.99,
-        img: "/img/ssd-sn850x-2tb.webp",
+        img: "/img/ssd-sn850x-2tb.png",
         details: {
             capacity: "2TB",
             interface: "NVMe PCIe 4.0",
@@ -382,7 +382,7 @@ export const PRODUCTS = [
         longDescription:
             "The Seagate Barracuda 2TB HDD is a cost-effective storage option for large files, backups, and general data storage. While SSDs are recommended for OS and applications, a high-capacity HDD is still useful for bulk storage needs at a lower cost per gigabyte.",
         price: 54.99,
-        img: "/img/hdd-2tb.jpg",
+        img: "/img/hdd-2tb.png",
         details: {
             capacity: "2TB",
             type: "HDD",
@@ -405,7 +405,7 @@ export const PRODUCTS = [
         longDescription:
             "The Corsair RM750 is a high-quality power supply designed for stable operation and quiet performance. With 80+ Gold efficiency and modular cabling, it helps keep power delivery clean while simplifying cable management for a tidy, professional build.",
         price: 119.99,
-        img: "/img/power-supply.jpg",
+        img: "/img/power-supply.png",
         details: {
             wattage: "750W",
             efficiency: "80+ Gold",
@@ -424,7 +424,7 @@ export const PRODUCTS = [
         longDescription:
             "The Seasonic Focus GX-850 is a premium PSU offering high efficiency, strong electrical performance, and fully modular cabling. It’s an excellent option for high-performance builds and upgrades, giving extra headroom for power-hungry GPUs and future expansions.",
         price: 139.99,
-        img: "/img/psu-850w.jpg",
+        img: "/img/psu-850w.png",
         details: {
             wattage: "850W",
             efficiency: "80+ Gold",
@@ -447,7 +447,7 @@ export const PRODUCTS = [
         longDescription:
             "The NZXT H5 Flow is designed for modern airflow-focused builds, with a clean interior layout and excellent cable management options. It supports a wide range of cooling configurations and provides a premium building experience with a minimalist aesthetic.",
         price: 89.99,
-        img: "/img/case-nzxt-h5.jpg",
+        img: "/img/case-nzxt-h5.png",
         details: {
             type: "ATX Mid Tower",
             airflow: "High airflow front panel",
@@ -466,7 +466,7 @@ export const PRODUCTS = [
         longDescription:
             "The Corsair 4000D Airflow is a popular mid tower case known for outstanding cooling potential and build quality. Its airflow front panel, smart cable management channels, and wide hardware compatibility make it ideal for performance-oriented gaming PCs.",
         price: 94.99,
-        img: "/img/case-4000d.webp",
+        img: "/img/case-4000d.png",
         details: {
             type: "ATX Mid Tower",
             airflow: "Airflow optimized front panel",
@@ -489,7 +489,7 @@ export const PRODUCTS = [
         longDescription:
             "The Cooler Master Hyper 212 is a classic air cooler that delivers reliable cooling performance at an accessible price. It’s well-suited for mid-range CPUs and offers a strong upgrade over stock coolers, improving temperatures and lowering noise.",
         price: 34.99,
-        img: "/img/cooler-hyper212.jpg",
+        img: "/img/cooler-hyper212.png",
         details: {
             type: "Air cooler",
             fanSize: "120mm",
@@ -507,7 +507,7 @@ export const PRODUCTS = [
         longDescription:
             "The NZXT Kraken 240 is a premium 240mm AIO liquid cooler designed for strong cooling performance and refined acoustics. It’s a great match for modern CPUs and builds that prioritize both thermals and aesthetics, especially in cases with good radiator support.",
         price: 129.99,
-        img: "/img/cooler-aio-240.jpg",
+        img: "/img/cooler-aio-240.png",
         details: {
             type: "AIO liquid cooler",
             radiatorSize: "240mm",
