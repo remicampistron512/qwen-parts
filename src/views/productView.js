@@ -1,5 +1,6 @@
 // Displays a single product page (/product/:id) with full description + specs table
 import {PRODUCTS} from "../data/products";
+import {Breadcrumbs} from "../ui/breadcrumbs";
 
 export function ProductView({ id }) {
     const productId = Number(id);
@@ -14,7 +15,8 @@ export function ProductView({ id }) {
       </section>
     `;
     }
-
+    const prettyCategory =
+        product.category.charAt(0).toUpperCase() + product.category.slice(1);
     // Convert details object into table rows automatically
     const specsRows = product.details
         ? Object.entries(product.details)
@@ -30,6 +32,11 @@ export function ProductView({ id }) {
         : `<tr><td colspan="2" class="text-muted">No specifications available.</td></tr>`;
 
     return `
+${Breadcrumbs([
+        { label: `<i class="bi bi-house-door me-1"></i> Home`, href: "/" },
+        { label: prettyCategory, href: `/category/${product.category}` },
+        { label: product.title, href: `/product/${product.id}` },
+    ])}
     <section class="py-5">
       <div class="mb-4">
         <a href="/category/${product.category}" data-link class="text-decoration-none">
