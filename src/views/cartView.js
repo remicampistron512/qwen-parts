@@ -29,14 +29,16 @@ export function CartView() {
 
       ${
         items.length === 0
-            ? `<p class="text-muted">Your cart is empty.</p>`
+            ? `<p>Your cart is empty.</p>`
             : `
             <div class="list-group mb-4">
               ${items
                 .map(
                     (p) => `
-                <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap gap-3">
-                  <div class="d-flex align-items-center gap-3">
+                <div class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div class="container">
+                <div class="row">
+                  <div class=" col-md-7">
                     <img src="${p.img}" alt="${p.title}" style="width:64px;height:64px;object-fit:cover;border-radius:8px;">
                     <div>
                       <div class="fw-bold">${p.title}</div>
@@ -44,17 +46,21 @@ export function CartView() {
                     </div>
                   </div>
 
-                  <div class="d-flex align-items-center gap-2">
+                  <div class="col-md-3">
                     <button class="btn btn-sm btn-outline-secondary cart-dec" data-id="${p.id}">-</button>
                     <span class="px-2">${p.quantity}</span>
                     <button class="btn btn-sm btn-outline-secondary cart-inc" data-id="${p.id}">+</button>
                   </div>
 
-                  <div class="fw-bold">${p.total.toFixed(2)} €</div>
-
+                  <div class="col-md-1 fw-bold">${p.total.toFixed(2)} €
+                  </div>
+                   <div class="col-md-1">
                   <button class="btn btn-sm btn-outline-danger cart-remove" data-id="${p.id}">
                     Remove
                   </button>
+                  </div>
+                </div>
+                </div>
                 </div>
               `
                 )
