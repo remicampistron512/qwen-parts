@@ -61,17 +61,19 @@
         </div>
 
         <div class="col-12 col-md-4 d-flex justify-content-center">
-            <div class="input-group search-input">
-                <span class="input-group-text">
-                  <i class="bi bi-search"></i>
-                </span>
-                    <input
-                            type="text"
-                            class="form-control"
-                            placeholder="search"
-                            aria-label="search"
-                    />
-            </div>
+            <form id="search-form" class="d-flex" role="search">
+                <input
+                        id="search-input"
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search products..."
+                        aria-label="Search"
+                />
+                <button class="btn btn-outline-primary" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+
         </div>
 
         <div class="col-12 col-md-4">
