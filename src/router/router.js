@@ -41,14 +41,28 @@ export function createRouter({ appEl, mainContainerEl }) {
     async function render() {
         const { view, params } = matchRoute(location.pathname);
 
+        // Highlight active links
         document.querySelectorAll("a[data-link]").forEach((a) => {
             a.classList.toggle("active", a.getAttribute("href") === location.pathname);
         });
 
+        // Fade OUT
+        appEl.classList.add("is-transitioning");
+
+        // Wait for transition to be visible
+        await new Promise((r) => setTimeout(r, 180));
+
+        // Swap content
         appEl.innerHTML = await view(params);
 
+        // Remove FOUC protection
         requestAnimationFrame(() => {
             mainContainerEl.classList.remove("app-hidden");
+        });
+
+        // Fade IN
+        requestAnimationFrame(() => {
+            appEl.classList.remove("is-transitioning");
         });
 
         updateCartBadge();

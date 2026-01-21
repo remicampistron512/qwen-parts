@@ -50,6 +50,28 @@ body {
   visibility: hidden;
 }
 
+/* =======================================
+   Page transition (fade)
+======================================= */
+#main-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+/* When switching routes */
+#main-content.is-transitioning {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #main-content {
+    transition: none;
+  }
+}
+
 // =====================================================
 // 4) Containers & Page Sections
 // =====================================================
