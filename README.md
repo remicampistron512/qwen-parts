@@ -30,16 +30,16 @@ Le projet simule une boutique de composants PC :
 - npm (fourni avec Node)
 
 ### 2) Installer les dépendances
-Dans le dossier du projet :
+Cloner le dépôt puis dans le dossier du projet :
 
 ```bash
 npm install
 ````
 
-### 3) Lancer le serveur de développement
+### 3) Lancer le serveur
 
 ```bash
-npm run dev
+npm start
 ```
 
 Vite va afficher une URL du type :
@@ -50,19 +50,7 @@ http://localhost:5173
 
 Ouvrir cette URL dans le  navigateur.
 
-### 4) Build production
 
-```bash
-npm run build
-```
-
-### 5) Prévisualiser la version buildée
-
-```bash
-npm run preview
-```
-
----
 
 ## Fonctionnalités principales
 
@@ -231,7 +219,7 @@ Composants et helpers UI :
 
 ### `src/data/`
 
-* `products.js` : source de vérité du catalogue (`PRODUCTS`)
+* `products.js` : catalogue produits (`PRODUCTS`)
 
     * `shortDescription`
     * `longDescription`
