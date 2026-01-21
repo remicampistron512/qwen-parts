@@ -1,56 +1,89 @@
+// =====================================================
+// 1) Bootstrap Import
+// =====================================================
 @import "bootstrap/scss/bootstrap";
 
-#main-container {
-   border-radius: 1em;
-   border-style: solid;
-   border-color:#50545D;
-   background: linear-gradient(135deg, #3C4049, #1D2027);
-  box-shadow: 0 4px 26px rgba(0, 0, 0, 0.15);
+// =====================================================
+// 2) Theme Variables
+// =====================================================
+:root {
+  --page-bg: #d9d9d9;
+  --muted-text: #444;
+  --card-img-bg: #e7eaee;
 
+
+  --bg-1: #3c4049;
+  --bg-2: #1d2027;
+
+  --surface: #23262d;
+  --surface-2: #2f333a;
+
+  --text: #cdcecb;
+  --text-light: #e4e4e4;
+
+  --border: #50545d;
+
+  --accent: #c28b3c;
+  --accent-secondary: #45678a;
 }
+
+// =====================================================
+// 3) Global Layout + Base Typography
+// =====================================================
 body {
-  background: linear-gradient(135deg, #3C4049, #1D2027);
-  color: #CDCECB;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  color: var(--text);
 }
+
 .text-white {
-  color:#CDCECB !important;
-}
-.search-input {
-
-}
-.search-input .form-control, .search-input span,.search-input .form-control::placeholder {
-  background-color: #292E34;
-  color:#E4E4E4;
-  border-color:#50545D;
-
-}
-.search-input span {
-  border-right:none;
+  color: var(--text) !important;
 }
 
-.search-input .form-control {
-  border-left:none;
+/* Useful spacing utility */
+.top-space {
+  padding-top: 2rem;
+  padding-bottom: 1.25rem;
 }
 
+/* Prevent FOUC before render() */
+.app-hidden {
+  visibility: hidden;
+}
+
+// =====================================================
+// 4) Containers & Page Sections
+// =====================================================
+#main-container {
+  border-radius: 1em;
+  border: 1px solid var(--border);
+
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  box-shadow: 0 4px 26px rgba(0, 0, 0, 0.15);
+}
+
+// =====================================================
+// 5) Navigation
+// =====================================================
 .navbar {
   background-color: transparent !important;
 }
 
-.img-placeholder img{
-  max-width: 80%;
+/* Top nav links */
+.nav-links a {
+  color: var(--muted-text);
+  text-decoration: none;
+  font-weight: 500;
 }
 
-
-.nav-icon-pill{
-  font-size: 1.2rem;
+.nav-links a:hover {
+  text-decoration: underline;
 }
+
+/* Category pill buttons */
 .nav-icon-pill {
   width: 160px;
   height: 120px;
   border-radius: 20px;
-  border-color: #45678A;
-  border-style: solid;
-  border-width: 2px;
 
   display: flex;
   flex-direction: column;
@@ -59,59 +92,109 @@ body {
 
   gap: 6px;
 
-  background: #2f333a;     /* dark background */
-  color: #e8e8e8;
-
+  font-size: 1.2rem;
   text-decoration: none;
+
+  background: var(--surface-2);
+  color: var(--text-light);
+
+  border: 2px solid var(--accent-secondary);
   transition: 0.2s ease;
 }
 
-/* Active style (orange outline like your screenshot) */
-.nav-icon-pill.active {
-  border-color: #c28b3c;
-}
-
-/* Hover effect */
 .nav-icon-pill:hover {
-  border-color: #c28b3c;
+  border-color: var(--accent);
   color: #ffffff;
 }
 
-#featured {
-
+.nav-icon-pill.active {
+  border-color: var(--accent);
 }
+
+// =====================================================
+// 6) Search Input (Navbar search)
+// =====================================================
+.search-input {
+  /* keeping for future layout rules */
+}
+
+/* Input + icon styling */
+.search-input .form-control,
+.search-input span,
+.search-input .form-control::placeholder {
+  background-color: #292e34;
+  color: var(--text-light);
+  border-color: var(--border);
+}
+
+.search-input span {
+  border-right: none;
+}
+
+.search-input .form-control {
+  border-left: none;
+}
+
+// =====================================================
+// 7) Hero / Images
+// =====================================================
+.img-placeholder img {
+  max-width: 80%;
+}
+
+// =====================================================
+// 8) Cards & Featured Section
+// =====================================================
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+}
+
+/* Featured section cards have gradient background */
 #featured .card {
-  background: linear-gradient(135deg, #3C4049, #1D2027);
-  color: #CDCECB;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  color: var(--text);
 }
 
+// =====================================================
+// 9) Breadcrumbs
+// =====================================================
+.breadcrumb .breadcrumb-item,
+.breadcrumb .breadcrumb-item:before,
+.breadcrumb .breadcrumb-item a {
+  color: var(--text-light);
+}
 
+// =====================================================
+// 10) Lists / Cart UI
+// =====================================================
+.list-group {
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 26px rgba(0, 0, 0, 0.15);
+}
+
+.list-group-item {
+  background-color: var(--surface);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+}
+
+// =====================================================
+// 11) Footer
+// =====================================================
 .footer-links a {
-  color: #E4E4E4;
+  color: var(--text-light);
   text-decoration: none;
 }
+
 .footer-links a:hover {
   text-decoration: underline;
 }
 
-.app-hidden {
-  visibility: hidden;
-}
-.card {
-  background-color: #23262d;
-  border: 1px solid #50545d;
-}
-
-.breadcrumb .breadcrumb-item, .breadcrumb .breadcrumb-item:before,.breadcrumb .breadcrumb-item a {
-  color: #E4E4E4;
-}
-
-.list-group {
-  border: 1px solid #50545d;
-  box-shadow: 0 4px 26px rgba(0, 0, 0, 0.15);
-}
-.list-group-item {
-  background-color: #23262d;
-  color: #E4E4E4;
-  border: 1px solid #50545d;
+// =====================================================
+// 12) Links inside headings
+// =====================================================
+h2 a {
+  color: var(--text-light);
+  text-decoration: none;
 }
