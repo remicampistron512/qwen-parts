@@ -7,5 +7,5 @@ export const routes = [
     { path: "/", view: HomeView },
     { path: "/category/:name", view: CategoryView },
     { path: "/cart", view: CartView },
-    { path: "/users", view: UsersView },
+
 ];
