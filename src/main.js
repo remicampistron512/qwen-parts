@@ -1,7 +1,7 @@
 // Import custom styles + libraries once in the entry file
 import "/scss/styles.scss";
 import * as bootstrap from "bootstrap";
-import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { createRouter } from "./router/router.js";
 import { setupNavigationHandler } from "./handlers/navigationHandler.js";

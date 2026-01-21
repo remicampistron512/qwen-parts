@@ -7,18 +7,25 @@ export function renderCategory(categoryName, products) {
             (p) => `
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card h-100">
-          <img src="${p.img}" class="card-img-top" alt="${p.title}">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">${p.title}</h5>
-            <p class="card-text">${p.description}</p>
-
-            <div class="mt-auto">
-              <p class="fw-bold mb-2">${p.price.toFixed(2)} €</p>
-              <button class="btn btn-primary w-100 add-to-cart" data-id="${p.id}">
-                <i class="bi bi-cart"></i> Add to cart
-              </button>
-            </div>
-          </div>
+                <a href="/products/${p.id}" data-link>
+                <img src="${p.img}" class="card-img-top" alt="${p.title}">
+                </a>
+          
+              <div  data-link class="card-body d-flex flex-column">
+              <a href="/products/${p.id}" data-link>
+                <h5 class="card-title">${p.title}</h5>
+              </a>
+               <a href="/products/${p.id}" data-link>
+                <p class="card-text">${p.description}</p>
+               </a>
+                <div class="mt-auto">
+                  <p class="fw-bold mb-2">${p.price.toFixed(2)} €</p>
+                  <button class="btn btn-primary w-100 add-to-cart" data-id="${p.id}">
+                    <i class="bi bi-cart"></i> Add to cart
+                  </button>
+                </div>
+              </div>
+            
         </div>
       </div>
     `
