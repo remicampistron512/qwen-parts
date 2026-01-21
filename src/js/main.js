@@ -72,14 +72,17 @@ function loadCart() {
     }
 }
 
+// Save cart to localstorage
 function saveCart(cart) {
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
+// Calculates the cart badge count by summing the quantity of each cart item
 function getCartCount() {
     return loadCart().reduce((sum, item) => sum + item.quantity, 0);
 }
 
+// Loads the cart from LocalStorage, updates the quantity for the given productId, then saves it back
 function addToCart(productId) {
     const cart = loadCart();
     const item = cart.find((i) => i.id === productId);
@@ -90,17 +93,21 @@ function addToCart(productId) {
     saveCart(cart);
 }
 
+// Loads the cart, subtracts 1 from the selected product's quantity, removes empty items, then saves the updated cart
 function decreaseFromCart(productId) {
     let cart = loadCart();
 
     cart = cart
+        // Update only the matching cart item by decreasing its quantity, leave all other items as they are
         .map((i) => (i.id === productId ? { ...i, quantity: i.quantity - 1 } : i))
+        // Keep only cart items with a positive quantity
         .filter((i) => i.quantity > 0);
 
     saveCart(cart);
 }
-
+// Completely removes a product from the cart (regardless of its quantity) and saves the updated cart
 function removeFromCart(productId) {
+    // Keep only the items that do NOT match the selected productId (removes it from the cart)
     const cart = loadCart().filter((i) => i.id !== productId);
     saveCart(cart);
 }
@@ -115,7 +122,7 @@ function clearCart() {
 
 /**
  * Updates the cart badge (example: #cart-count in your navbar).
- * If badge does not exist on page, function does nothing.
+ * If badge does not exist on page,function does nothing.
  */
 function updateCartBadge() {
     const badge = document.querySelector("#cart-count");
