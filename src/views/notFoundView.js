@@ -1,0 +1,7 @@
+export function NotFoundView() {
+    return `
+    <h1>404</h1>
+    <p>Page not found.</p>
+    <a href="/" data-link>Go Home</a>
+  `;
+}
