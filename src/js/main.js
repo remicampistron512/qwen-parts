@@ -262,15 +262,18 @@ function Home() {
  * Dynamic category page: /category/:name
  * Example: /category/motherboard
  */
+
+// Renders a dynamic category page by filtering products by category name and generating the category HTML
 function CategoryView({ name }) {
     const filtered = PRODUCTS.filter((p) => p.category === name);
     return renderCategory(name, filtered);
 }
 
+// Renders the cart page by combining cart data from LocalStorage with product details and displaying totals + actions
 function CartView() {
     const cart = loadCart();
 
-    // Merge cart items with product details
+    // For each cart entry, find the matching product details, calculate line total, and filter out invalid entries
     const items = cart
         .map((ci) => {
             const product = PRODUCTS.find((p) => p.id === ci.id);
@@ -292,8 +295,9 @@ function CartView() {
         <h4 class="mb-0">Your Cart</h4>
         ${items.length ? `<button class="btn btn-outline-danger btn-sm cart-clear">Clear cart</button>` : ""}
       </div>
-
+      
       ${
+        // if the cart is empty, display a message else display the cart items
         items.length === 0
             ? `<p class="text-muted">Your cart is empty.</p>`
             : `
@@ -361,6 +365,7 @@ function NotFound() {
 // Router (SPA)
 // =============================
 
+// Declare and initialize the routes array with route definitions
 const routes = [
     { path: "/", view: Home },
     { path: "/category/:name", view: CategoryView },
@@ -374,6 +379,7 @@ const routes = [
  */
 function matchRoute(pathname) {
     for (const route of routes) {
+        // split the route and path into parts, filtering out empty parts
         const routeParts = route.path.split("/").filter(Boolean);
         const pathParts = pathname.split("/").filter(Boolean);
 
