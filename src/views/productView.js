@@ -65,7 +65,7 @@ export function ProductView({ id }) {
         <h4 class="mb-3">Specifications</h4>
 
         <div class="table-responsive">
-          <table class="table table-striped align-middle">
+          <table class="table table-striped table-dark align-middle">
             <tbody>
               ${specsRows}
             </tbody>
