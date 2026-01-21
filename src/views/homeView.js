@@ -58,25 +58,7 @@ export function HomeView() {
 
           </ul>
         </div>
-
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
         </div>
-
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-        </div>
-      </div>
-
-      <button class="carousel-control-prev justify-content-lg-start" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button class="carousel-control-next justify-content-lg-end" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   `;
 }
