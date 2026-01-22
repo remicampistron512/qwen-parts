@@ -8,24 +8,15 @@ import {
 import { updateCartBadge } from "../ui/cartBadge.js";
 
 /**
- * Sets up cart event handling using event delegation.
- * This is required because product cards and cart UI are rendered dynamically (SPA).
- *
- * Supported actions:
- * - Add product to cart from product cards
- * - Increase quantity in cart
- * - Decrease quantity in cart
- * - Remove item from cart
- * - Clear entire cart
- *
+ * This function employs delegation: one event listener on a parent for many children
+ * and listen for events on elements with classes related to the cart.
+ * It then calls the cart service functions to perform the desired action.
  * @param {Function} render - A function that re-renders the current page (router.render)
  */
 export function setupCartHandler(render) {
-    // Attach one global click listener to handle all cart-related buttons
+    // Attach a global event listener
     document.addEventListener("click", (e) => {
-        // =============================
-        // 1) Add to cart (from product cards / product page)
-        // =============================
+        // captures an element that is a descendant of the closest ancestor with class "add-to-cart"
         const addBtn = e.target.closest(".add-to-cart");
         if (addBtn) {
             // Get product id from the button's data-id attribute
