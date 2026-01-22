@@ -49,7 +49,9 @@ body {
 .app-hidden {
   visibility: hidden;
 }
-
+a {
+  color: var(--text-light);
+}
 /* =======================================
    Page transition (fade)
 ======================================= */
