@@ -16,49 +16,53 @@ export function HomeView() {
 
     <h4 class="mb-5">Shop by category</h4>
 
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <ul class="nav justify-content-around">
+    <div class="container ">
+        <div class="row ">
+            <div class="my-4  col-xl-2 col-lg-4 col-md-6 col-sm-6  d-flex justify-content-around ">
+                <a class="shadow nav-link nav-icon-pill" href="/category/gpu" data-link>
+                    <i class="bi bi-gpu-card"></i>
+                    <span>GPU</span>
+                </a>
+            </div>
 
-            <li class="nav-item">
-              <a class="nav-link nav-icon-pill" href="/category/gpu" data-link>
-                <i class="bi bi-gpu-card"></i>
-                <span>GPU</span>
-              </a>
-            </li>
 
-            <li class="nav-item">
-              <a class="nav-link nav-icon-pill" href="/category/cpu" data-link>
-                <i class="bi bi-cpu"></i>
-                <span>CPU</span>
-              </a>
-            </li>
+            <div class="my-4   col-xl-2 col-lg-4  col-md-6 col-sm-6 d-flex justify-content-around">
+                <a class="shadow  nav-link nav-icon-pill" href="/category/cpu" data-link>
+                    <i class="bi bi-cpu"></i>
+                    <span>CPU</span>
+                </a>
+            </div>
 
-            <li class="nav-item">
-              <a class="nav-link nav-icon-pill" href="/category/ram" data-link>
-                <i class="bi bi-memory"></i>
-                <span>RAM</span>
-              </a>
-            </li>
+            <div class="my-4   col-xl-2 col-lg-4  col-md-6 col-sm-6 d-flex justify-content-around"> 
+                <a class="shadow nav-link nav-icon-pill" href="/category/ram" data-link>
+                    <i class="bi bi-memory"></i>
+                    <span>RAM</span>
+                </a>
+            </div>
 
-            <li class="nav-item">
-              <a class="nav-link nav-icon-pill" href="/category/motherboard" data-link>
-                <i class="bi bi-motherboard"></i>
-                <span>Motherboard</span>
-              </a>
-            </li>
+            <div class="my-4  col-xl-2 col-lg-4 col-md-6 col-sm-6 d-flex justify-content-around">
+                <a class="shadow  nav-link nav-icon-pill" href="/category/motherboard" data-link>
+                    <i class="bi bi-motherboard"></i>
+                    <span>Motherboard</span>
+                </a>
+            </div>
 
-            <li class="nav-item">
-              <a class="nav-link nav-icon-pill" href="/category/storage" data-link>
-                <i class="bi bi-database"></i>
-                <span>Storage</span>
-              </a>
-            </li>
+            <div class="my-4   col-xl-2 col-lg-4  col-md-6 col-sm-6 d-flex justify-content-around ">           
+                <a class="shadow nav-link nav-icon-pill" href="/category/storage" data-link>
+                    <i class="bi bi-database"></i>
+                    <span>Storage</span>
+                </a>
+            </div>
+            
+             <div class=" my-4  col-xl-2 col-lg-4  col-md-6 col-sm-6 d-flex justify-content-around">           
+                <a class="shadow nav-link nav-icon-pill" href="/category/case" data-link>
+                   <i class="bi bi-pc"></i>
+                    <span>Case</span>
+                </a>
+            </div>
 
-          </ul>
-        </div>
-        </div>
-    </div>
+</div>
+</div>
+     
   `;
 }
