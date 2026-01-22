@@ -131,6 +131,7 @@ a {
 .nav-icon-pill:hover {
   border-color: var(--accent);
   color: #ffffff;
+  box-shadow: red 1px 1px !important
 }
 
 .nav-icon-pill.active {
