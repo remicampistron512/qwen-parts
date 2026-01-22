@@ -19,9 +19,9 @@ export function CartView() {
 
     // Merge each cart item with its full product information
     const items = cart
-        .map((ci) => {
+        .map((cartItem) => {
             // Find the product details based on cart item id
-            const product = PRODUCTS.find((p) => p.id === ci.id);
+            const product = PRODUCTS.find((p) => p.id === cartItem.id);
 
             // If product doesn't exist anymore (removed from PRODUCTS), ignore it
             if (!product) return null;
@@ -29,8 +29,8 @@ export function CartView() {
             // Create a new object containing all product data + quantity + line total
             return {
                 ...product,
-                quantity: ci.quantity,
-                total: product.price * ci.quantity,
+                quantity: cartItem.quantity,
+                total: product.price * cartItem.quantity,
             };
         })
         // Remove any null items returned above
