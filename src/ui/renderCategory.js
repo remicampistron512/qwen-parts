@@ -4,23 +4,23 @@
 export function renderCategory(categoryName, products) {
     const cardsHTML = products
         .map(
-            (p) => `
+            (product) => `
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card h-100">
-                <a href="/products/${p.id}" data-link>
-                <img src="${p.img}" class="card-img-top" alt="${p.title}">
+                <a href="/products/${product.id}" data-link>
+                <img src="${product.img}" class="card-img-top" alt="${product.title}">
                 </a>
           
               <div  data-link class="card-body d-flex flex-column">
-              <a href="/products/${p.id}" data-link>
-                <h5 class="card-title">${p.title}</h5>
+              <a href="/products/${product.id}" data-link>
+                <h5 class="card-title">${product.title}</h5>
               </a>
               
-                <p class="text-white card-text">${p.shortDescription}</p>
+                <p class="text-white card-text">${product.shortDescription}</p>
           
                 <div class="mt-auto">
-                  <p class="fw-bold mb-2">${p.price.toFixed(2)} €</p>
-                  <button class="btn btn-primary w-100 add-to-cart" data-id="${p.id}">
+                  <p class="fw-bold mb-2">${product.price.toFixed(2)} €</p>
+                  <button class="btn btn-primary w-100 add-to-cart" data-id="${product.id}">
                     <i class="bi bi-cart"></i> Add to cart
                   </button>
                 </div>
