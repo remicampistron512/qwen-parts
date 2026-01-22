@@ -1,6 +1,12 @@
+import {renderFeatured} from "../ui/renderFeatured";
+import {PRODUCTS} from "../data/products";
+
 export function HomeView() {
+
+    const filtered = PRODUCTS.filter((p) => p.category === name);
+
     return `
-    <section class="py-5">
+    <section class="py-5 container">
       <div class="row align-items-center gy-4">
         <div class="col-12 col-lg-6">
           <h1 class="hero-title mb-0">Build a better pc</h1>
@@ -60,6 +66,10 @@ export function HomeView() {
                     <span>Case</span>
                 </a>
             </div>
+            <section class="container py-5">
+                
+                 ${renderFeatured(PRODUCTS)} 
+            </section>
 
 </div>
 </div>
