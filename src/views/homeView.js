@@ -7,7 +7,7 @@ export function HomeView() {
     <section class="py-5 container">
       <div class="row align-items-center gy-4">
         <div class="col-12 col-lg-6">
-          <h1 class="hero-title mb-0">Build a better pc</h1>
+          <h1 class="hero-title mb-1">Build a better pc</h1>
           <h5 class="fw-lighter">Premium components, verified compatibility, fast delivery</h5>
         </div>
         <div class="col-12 col-lg-6">
