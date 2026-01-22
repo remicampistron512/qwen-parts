@@ -49,7 +49,7 @@ export function CartView() {
         <!-- Only show the "Clear cart" button if cart contains items -->
         ${
         items.length
-            ? `<button class="btn btn-outline-danger btn-sm cart-clear">Clear cart</button>`
+            ? `<button class="btn btn-danger btn-sm cart-clear">Clear cart</button>`
             : ""
     }
       </div>
@@ -96,7 +96,7 @@ export function CartView() {
 
                       <!-- Remove product button -->
                       <div class="col-md-1">
-                        <button class="btn btn-sm btn-outline-danger cart-remove" data-id="${p.id}">
+                        <button class="btn btn-sm btn-danger cart-remove" data-id="${p.id}">
                           Remove
                         </button>
                       </div>

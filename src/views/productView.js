@@ -58,7 +58,7 @@ export function ProductView({ id }) {
     return `
     <!-- Breadcrumb navigation (Home > Category > Product) -->
     ${Breadcrumbs([
-        { label: `<i class="bi bi-house-door me-1"></i> Home`, href: "/" },
+        { label: `<i class="bi bi-house-door me-1"></i> `, href: "/" },
         { label: prettyCategory, href: `/category/${product.category}` },
         { label: product.title, href: `/product/${product.id}` },
     ])}
