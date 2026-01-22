@@ -3,7 +3,7 @@ import { NotFoundView } from "../views/notFoundView.js";
 import { updateCartBadge } from "../ui/cartBadge.js";
 
 /**
- * Matches the current URL pathname against the routes list.
+ * Matches the current url with registered routes.
  * Supports dynamic parameters like:
  *   /category/:name  ->  { name: "motherboard" }
  *
