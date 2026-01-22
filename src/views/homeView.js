@@ -3,8 +3,6 @@ import {PRODUCTS} from "../data/products";
 
 export function HomeView() {
 
-    const filtered = PRODUCTS.filter((p) => p.category === name);
-
     return `
     <section class="py-5 container">
       <div class="row align-items-center gy-4">
