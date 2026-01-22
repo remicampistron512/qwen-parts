@@ -84,7 +84,7 @@ export function ProductView({ id }) {
           <h1 class="mb-2">${product.title}</h1>
 
           <!-- Category label -->
-          <p class="text-muted text-capitalize mb-3">${product.category}</p>
+          <p class="text-capitalize mb-3">${product.category}</p>
 
           <!-- Price -->
           <h3 class="fw-bold mb-3">${product.price.toFixed(2)} €</h3>
